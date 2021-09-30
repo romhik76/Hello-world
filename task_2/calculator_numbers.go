@@ -2,15 +2,16 @@ package main
 
 import "fmt"
 
+
 func main() {
-	var a, b float32
+	var a int
+	fmt.Println("Введите произвольное число до 1000:")
+	fmt.Scan(&a)
 
-	fmt.Print("Введите первое число:")
-	fmt.Scanln(&a)
+	b := a / 100
+	c := (a - b * 100) / 10
+	d := (a - b * 100 - c * 10) / 1
 
-	fmt.Print("Введите второе число:")
-	fmt.Scanln(&b)
+	fmt.Print( "сотни: ", b, ". десятки: ", c, ". единицы: ", d, ".")
 
-	fmt.Printf("S(площадь фигуры) равна: %f\n", a*b)
 }
-
