@@ -84,17 +84,8 @@ func Calc() {
 }
 
 func main() {
-	//SayHello()
-	//Calc()
+	SayHello()
 
-	s := "Hallo Мир"
+	Calc()
 
-	for pos, c := range s {
-		fmt.Printf("%d: %c (%d)\n", pos, c, c)
-	}
-	fmt.Println("===========")
-
-	for pos, c := range []byte(s) {
-		fmt.Printf("%d: %c (%d)\n", pos, c, c)
-	}
 }
