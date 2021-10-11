@@ -88,4 +88,15 @@ func main() {
 
 	Calc()
 
+	s := "Hallo Мир"
+
+	for pos, c := range s {
+		fmt.Printf("%d: %c (%d)\n", pos, c, c)
+	}
+	fmt.Println("===========")
+
+	for pos, c := range []byte(s) {
+		fmt.Printf("%d: %c (%d)\n", pos, c, c)
+	}
+
 }
