@@ -17,14 +17,16 @@ func getGreetingMessage(names []string) (string, error) {
 		return "", fmt.Errorf("Нет больше имен")
 	}
 
+	namesClean := make([]string, 0)
 	for _, name := range names {
 		if name == "" {
-			return "", fmt.Errorf("Строка имени пуста")
+			continue
 		}
+		namesClean = append(namesClean, name)
 	}
 
 	s := fmt.Sprintln("hallo " + strings.Join(names, ", ") + "!")
-	s += fmt.Sprintln("task_2")
+	s += fmt.Sprintln("task_3")
 	return s, nil
 }
 
@@ -40,9 +42,7 @@ func SayHello() {
 
 }
 
-func main() {
-	SayHello()
-
+func Calc() {
 	fmt.Println("Введите два операнта (через пробел)")
 	var operand1, operand2 float64
 	_, err := fmt.Scanf("%f %f", &operand1, &operand2)
@@ -80,5 +80,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Результат = %5.2f\n", result)
+	fmt.Printf("Результат = %.2f\n", result)
+}
+
+func main() {
+	SayHello()
+
+	Calc()
+
+	s := "Hallo world"
 }
